@@ -22,7 +22,7 @@ func (m *MapItem) String() string {
 	return m.Name
 }
 
-const BaseMapURL = "https://github.com/denverquane/automuteus/blob/master/assets/maps/"
+const BaseMapURL = "https://github.com/h-matsufuji9/automuteus-1/tree/dev/assets/maps/"
 
 func NewMapItem(name string) (*MapItem, error) {
 	switch strings.ToLower(name) {
@@ -34,8 +34,8 @@ func NewMapItem(name string) (*MapItem, error) {
 		name = "polus"
 	//case "dleks":
 	//	name = "dleks"
-	//case "airship", "ship":
-	//	name = "airship"
+	case "airship", "ship":
+		name = "airship"
 	default:
 		return nil, errors.New(fmt.Sprintf("Invalid map name: %s", name))
 	}
